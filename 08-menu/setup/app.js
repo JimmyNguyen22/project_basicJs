@@ -71,4 +71,80 @@ const menu = [
     img: "./images/item-9.jpeg",
     desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
   },
+  {
+    id: 10,
+    title: "steak",
+    category: "dinner",
+    price: 36.99,
+    img: "./images/item-10.jpeg",
+    desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
+  },
 ];
+
+const sectionCenter = document.querySelector(".section-center");
+const btnContainer = document.querySelector(".btn-container");
+
+// display render all items when pages load
+window.addEventListener("DOMContentLoaded", function () {
+  listItem(menu);
+  listBtn();
+});
+
+function listItem(menuItems) {
+  let listMenu = menuItems
+    .map((item) => {
+      return `<article class="menu-item">
+             <img src=${item.img} class="photo" alt=${item.title}>
+             <div class="item-info">
+               <header>
+                 <h4>${item.title}</h4>
+                 <h4 class="price">$${item.price}</h4>
+               </header>
+               <p class="item-text">${item.desc}</p>
+             </div>
+           </article>`;
+    })
+    .join("");
+
+  sectionCenter.innerHTML = listMenu;
+}
+
+function listBtn() {
+  let nameBtn = menu.reduce(
+    (value, item) => {
+      if (!value.includes(item.category)) {
+        value.push(item.category);
+      }
+      return value;
+    },
+    ["all"]
+  );
+
+  let listBtn = nameBtn
+    .map((item) => {
+      return `<button class="filter-btn"
+                         type="button"
+                        value=${item}
+                        >
+                         ${item}
+                  </button>`;
+    })
+    .join("");
+
+  btnContainer.innerHTML = listBtn;
+
+  // filter buttons
+  let filterBtn = btnContainer.querySelectorAll(".filter-btn");
+  filterBtn.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      let getValue = e.currentTarget.value;
+      let getName = menu.filter((item) => {
+        if (item.category === getValue) {
+          return item;
+        }
+      });
+      getValue === "all" ? listItem(menu) : listItem(getName);
+    });
+  });
+}
+
