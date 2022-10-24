@@ -1,16 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tabs</title>
 
-    <!-- styles -->
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <h1>tabs project</h1>
-    <!-- javascript -->
-    <script src="app.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tabs</title>
+
+  <!-- styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <section class="section">
+    <div class="title">
+      <h2>about</h2>
+      <p>Lorem ipsum do onsequatur architecto sit iure saepe. Obcaecati magnam ad natus amet.</p>
+    </div>
+    <div class="about-center section-center">
+      <article class="about-img">
+        <img src="./hero-bcg.jpeg" alt="">
+      </article>
+      <article class="about">
+        <!-- btn container -->
+        <div class="btn-container">
+          <button class="tab-btn active" value="history">
+            history
+          </button>
+          <button class="tab-btn" value="vision">
+            vision
+          </button>
+          <button class="tab-btn" value="goals">
+            goals
+          </button>
+        </div>
+        <article class="about-content">
+          <!-- single item -->
+          <div class="content active" id="history">
+            <h4>history</h4>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias adipisci maxime laudantium hic, dolores
+              nisi ! Suscipit saepe voluptate ducimus temporibus atque maxime.</p>
+  
+          </div>
+          <div class="content" id="vision">
+            <h4>vision</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. , consequuntur officiis autem.</p>
+            <ul>
+              <li>list item</li>
+              <li>list item</li>
+              <li>list item</li>
+            </ul>
+          </div>
+          <div class="content" id="goals">
+            <h4>goals</h4>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci doloremque delectus mollitia esse libero
+              nobis illo ullam eos deleniti est voluptas quos, ducimus, nisi repellendus commodi eum, iste officia
+              laborum!</p>
+          </div>
+        </article>
+      </article>
+    </div>
+  </section>
+  <!-- javascript -->
+  <script src="app.js"></script>
+</body>
+
 </html>
