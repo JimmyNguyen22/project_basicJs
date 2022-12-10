@@ -1,17 +1,5 @@
 # Vanilla JS Projects
 
-#### Enroll In The Course
-
-[My Javascript Course](https://www.udemy.com/course/javascript-tutorial-for-beginners-w/?referralCode=DD9FA6C0D976918D3E1C)
-
-#### Support
-
-Find the Content Useful? [You can always buy me a coffee](https://www.buymeacoffee.com/johnsmilga)
-
-## You can see all projects in action here
-
-[Projects](https://www.vanillajavascriptprojects.com/)
-
 1. Color Flipper
 2. Counter
 3. Reviews
